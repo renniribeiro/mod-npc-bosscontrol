@@ -6,7 +6,7 @@ void AddSC_npc_bosscontrol();
 /*
     Função chamada pelo core para registrar scripts do módulo
 */
-void Addmod_bosscontrolScripts()
+void Addmod_npc_bosscontrolScripts()
 {
     AddSC_npc_bosscontrol();
 }
