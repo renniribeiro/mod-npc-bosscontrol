@@ -27,3 +27,19 @@ INSERT INTO creature_template (
     0,
     'npc_bosscontrol'
 );
+
+-- ########################################
+-- APAR?NCIA DO NPC CONTROLLER
+-- ########################################
+
+DELETE FROM creature_template_model WHERE CreatureID = 90000;
+
+INSERT INTO creature_template_model (
+    CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability
+) VALUES (
+    90000,
+    0,
+    18471,   -- modelo (ex: NPC humano)
+    1.0,
+    1
+);
