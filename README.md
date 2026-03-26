@@ -1,34 +1,25 @@
 # ![logo](https://raw.githubusercontent.com/azerothcore/azerothcore.github.io/master/images/logo-github.png) AzerothCore
 
-## mod-npc-morph
+## mod-npc-bosscontrol
 
 ### This is a module for [AzerothCore](http://www.azerothcore.org)
 
-- Latest build status with azerothcore: [![Build Status](https://github.com/azerothcore/mod-npc-morph/workflows/core-build/badge.svg?branch=master&event=push)](https://github.com/azerothcore/mod-npc-morph)
-
 #### Features:
 
-- Character services:
+- NPC disponibiliza summon de 3 bosses em 3 dificuldades (baixa, média e alta):
 
-1. Morph character in Gnome, male
-2. Morph character in Gnome, female
-3. Morph character in Human, male
-4. Morph character in Human, female
-5. Morph character in Blood Elf, male
-6. Morph character in Blood Elf, female
-7. Morph character in Tauren, male
-8. Morph character in Tauren, female
-9. Will be added more morphs soon..
+1. Sumona Mostrinho - level 60
+2. Sumona Mostro - level 70
+3. Sumona Monstrengo - level 120
 
 ### Usage
 
-- Enable this module, spawn Morph NPC `.npc add 55004` and talk with him.
+- Enable this module, spawn Morph NPC `.npc add 90000` and talk with him.
 
 ### Showcase / Video
 
-[Watch Video here](https://youtu.be/7UPJatFJN-8)
-
+[Watch Video here](https://youtube.com/@nixcraftbr?si=NAdJ89FK5kZZnAoS)
 
 ## Credits
-* [Poszer](https://github.com/Poszer): (author of the module)
+* [Poszer](https://github.com/Poszer): (author of the original module mod-morph)
 * AzerothCore: [repository](https://github.com/azerothcore) - [website](http://azerothcore.org/) - [discord chat community](https://discord.gg/PaqQRkd)

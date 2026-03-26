@@ -1,6 +1,6 @@
-void AddSC_npc_morph();
+void AddSC_npc_bosscontrol();
 
-void Addmod_npc_morphScripts()
+void Addmod_npc_bosscontrolScripts()
 {
-    AddSC_npc_morph();
+    AddSC_npc_bosscontrol();
 }
