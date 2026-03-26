@@ -1,11 +1,12 @@
-// Declaração da função que registra o script do NPC
-// Essa função foi definida no arquivo npc_morph.cpp
-void AddSC_npc_morph();
+#include "ScriptMgr.h"
 
-// Função principal do módulo (loader)
-// O nome normalmente segue padrão: Addmod_<nome>Scripts
-void Addmod_npc_morphScripts()
+// Declaração do script
+void AddSC_npc_bosscontrol();
+
+/*
+    Função chamada pelo core para registrar scripts do módulo
+*/
+void Addmod_bosscontrolScripts()
 {
-    // Chama a função que registra o script no core
-    AddSC_npc_morph();
+    AddSC_npc_bosscontrol();
 }

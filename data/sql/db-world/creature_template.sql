@@ -1,15 +1,26 @@
--- deletar registros antigos
-DELETE FROM creature_template WHERE entry IN (90000,80001,80002,80003) AND source_type=0;
+-- ########################################
+-- BOSSES
+-- ########################################
 
--- criar boss 1
-INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `speed_swim`, `speed_flight`, `detection_range`, `scale`, `rank`, `dmgschool`, `DamageModifier`, `BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `HoverHeight`, `HealthModifier`, `ManaModifier`, `ArmorModifier`, `ExperienceModifier`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `spell_school_immune_mask`, `flags_extra`, `ScriptName`, `VerifiedBuild`) VALUES (80001, 0, 0, 0, 0, 0, 'Monstrinho', 'Nixcraft Server', NULL, 0, 60, 60, 1, 16, 2, 1, 1.71429, 1, 1, 20, 1, 1, 0, 9, 2000, 2000, 1, 1, 1, 32832, 2048, 0, 45, 1, 67585, 21102, 0, 70162, 0, 0, 10000, 15000, '', 1, 1, 10, 1, 1, 1, 0, 164, 1, 42016080, 0, 1073741824, 'npc_arena_boss1', 12340);
+DELETE FROM creature_template WHERE entry IN (80001,80002,80003);
 
--- criar boss 2
-INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `speed_swim`, `speed_flight`, `detection_range`, `scale`, `rank`, `dmgschool`, `DamageModifier`, `BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `HoverHeight`, `HealthModifier`, `ManaModifier`, `ArmorModifier`, `ExperienceModifier`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `spell_school_immune_mask`, `flags_extra`, `ScriptName`, `VerifiedBuild`) VALUES (80002, 0, 0, 0, 0, 0, 'Monstro', 'Nixcraft Server', NULL, 0, 70, 70, 1, 16, 2, 1, 1.14286, 1, 1, 20, 1, 1, 0, 9, 2000, 2000, 1, 1, 1, 32768, 2048, 0, 45, 1, 67585, 21102, 0, 70162, 0, 0, 20000, 25000, '', 1, 1, 10, 1, 1, 1, 0, 164, 1, 42016080, 0, 1073741824, 'npc_arena_boss2', 12340);
+-- Boss 1
+INSERT INTO creature_template (entry, name, subname, minlevel, maxlevel, faction, npcflag, rank, unit_class, unit_flags, type, ScriptName)
+VALUES (80001, 'Monstrinho', 'Nixcraft Server', 60, 60, 16, 0, 3, 1, 0, 7, 'npc_arena_boss1');
 
--- criar boss 3
-INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `speed_swim`, `speed_flight`, `detection_range`, `scale`, `rank`, `dmgschool`, `DamageModifier`, `BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `HoverHeight`, `HealthModifier`, `ManaModifier`, `ArmorModifier`, `ExperienceModifier`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `spell_school_immune_mask`, `flags_extra`, `ScriptName`, `VerifiedBuild`) VALUES (80003, 0, 0, 0, 0, 0, 'Monstrengo Boss', 'Nixcraft Server', '', 0, 120, 120, 1, 16, 2, 1, 1.71429, 1, 1, 20, 2, 1, 0, 9, 2000, 2000, 1, 1, 1, 32768, 2048, 8, 45, 1, 67585, 80003, 0, 70162, 0, 0, 300000, 350000, '', 1, 1, 10, 1, 1, 1, 0, 164, 1, 42016080, 0, 1073741824, 'npc_arena_boss3', 12340);
+-- Boss 2
+INSERT INTO creature_template (entry, name, subname, minlevel, maxlevel, faction, npcflag, rank, unit_class, unit_flags, type, ScriptName)
+VALUES (80002, 'Monstro', 'Nixcraft Server', 70, 70, 16, 0, 3, 1, 0, 7, 'npc_arena_boss2');
 
--- criar npc controlador
-INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `speed_swim`, `speed_flight`, `detection_range`, `scale`, `rank`, `dmgschool`, `DamageModifier`, `BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `HoverHeight`, `HealthModifier`, `ManaModifier`, `ArmorModifier`, `ExperienceModifier`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `spell_school_immune_mask`, `flags_extra`, `ScriptName`, `VerifiedBuild`) VALUES (90000, 0, 0, 0, 0, 0, 'Arena Controller', 'Nixcraft', NULL, 90000, 80, 80, 0, 35, 1, 1, 1.14286, 1, 1, 20, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 'npc_arena_controller', NULL);
+-- Boss 3
+INSERT INTO creature_template (entry, name, subname, minlevel, maxlevel, faction, npcflag, rank, unit_class, unit_flags, type, ScriptName)
+VALUES (80003, 'Monstrengo Boss', 'Nixcraft Server', 80, 80, 16, 0, 3, 1, 0, 7, 'npc_arena_boss3');
 
+-- ########################################
+-- CONTROLLER
+-- ########################################
+
+DELETE FROM creature_template WHERE entry = 90000;
+
+INSERT INTO creature_template (entry, name, subname, minlevel, maxlevel, faction, npcflag, ScriptName)
+VALUES (90000, 'Boss Controller', 'Arena System', 80, 80, 35, 1, 'npc_bosscontrol');
